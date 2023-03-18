@@ -6,5 +6,5 @@ config = pc.Config(
     api_url="0.0.0.0:8000",
     bun_path="/app/.bun/bin/bun",
     db_url="sqlite:///pynecone.db",
-    env=pc.Env.DEV,
+    # env=pc.Env.DEV,
 )

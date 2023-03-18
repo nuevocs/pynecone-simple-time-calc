@@ -1,0 +1,11 @@
+version: '2'
+services:
+  pynecone:
+    container_name: pycone-working-time-calculator
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "${PWD}:8000"
+      - "${PWD}:3000"

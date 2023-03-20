@@ -6,6 +6,8 @@ services:
       context: .
       dockerfile: Dockerfile
     restart: always
+    environment:
+      - API_URL=${API_URL}
     ports:
-      - "${PORTS1}:8000"
-      - "${PORTS2}:3000"
+      - "${PORTS_PUBLIC}:8000"
+      - "${PORTS_API}:3000"

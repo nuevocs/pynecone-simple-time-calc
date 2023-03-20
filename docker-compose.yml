@@ -7,5 +7,5 @@ services:
       dockerfile: Dockerfile
     restart: always
     ports:
-      - "${PORTS1}:8000"
+#      - "${PORTS1}:8000"
       - "${PORTS2}:3000"

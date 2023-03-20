@@ -43,7 +43,7 @@ COPY --chown=pynecone --from=init /app/ /app/
 USER pynecone
 WORKDIR /app
 
-CMD ["pc","run"]
+CMD ["pc","run" , "--env", "dev"]
 #CMD ["pc","run" , "--env", "prod"]
 
 EXPOSE 3000

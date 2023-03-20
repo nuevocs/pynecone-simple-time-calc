@@ -1,7 +1,6 @@
 import os
 import pynecone as pc
 # from dotenv import load_dotenv
-#
 # load_dotenv()
 
 config = pc.Config(

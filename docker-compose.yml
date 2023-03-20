@@ -9,7 +9,7 @@ services:
     environment:
       - ACCESS_API_URL=${ACCESS_API_URL}
     env_file:
-      - .env
+      - stack.env
     ports:
       - "${PORTS_API}:8000"
       - "${PORTS_PUBLIC}:3000"

@@ -8,6 +8,8 @@ services:
     restart: always
     environment:
       - ACCESS_API_URL=${ACCESS_API_URL}
+    env_file:
+      - .env
     ports:
-      - "${PORTS_PUBLIC}:8000"
-      - "${PORTS_API}:3000"
+      - "${PORTS_API}:8000"
+      - "${PORTS_PUBLIC}:3000"

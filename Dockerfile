@@ -12,6 +12,11 @@ ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
 COPY . .
 
+# added manually
+RUN apt-get update && apt-get install -y \
+    gcc \
+    python3-dev
+
 RUN pip install wheel \
     && pip install -r requirements.txt
 
@@ -43,8 +48,8 @@ COPY --chown=pynecone --from=init /app/ /app/
 USER pynecone
 WORKDIR /app
 
-CMD ["pc","run" , "--env", "dev"]
-#CMD ["pc","run" , "--env", "prod"]
+#CMD ["pc","run" , "--env", "dev"]
+CMD ["pc","run" , "--env", "prod"]
 
 EXPOSE 3000
 EXPOSE 8000

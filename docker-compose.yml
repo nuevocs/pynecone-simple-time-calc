@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile
     restart: always
     environment:
-      - API_URL=${API_URL}
+      - ACCESS_API_URL=${ACCESS_API_URL}
     ports:
       - "${PORTS_PUBLIC}:8000"
       - "${PORTS_API}:3000"

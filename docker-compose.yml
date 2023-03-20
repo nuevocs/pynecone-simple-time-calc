@@ -6,8 +6,8 @@ services:
       context: .
       dockerfile: Dockerfile
     restart: always
-    environment:
-      - ACCESS_API_URL=${ACCESS_API_URL}
+#    environment:
+#      - ACCESS_API_URL=${ACCESS_API_URL}
     env_file:
       - stack.env
     ports:

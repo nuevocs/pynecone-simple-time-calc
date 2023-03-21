@@ -12,11 +12,6 @@ ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
 COPY . .
 
-# added manually
-RUN apt-get update && apt-get install -y \
-    gcc \
-    python3-dev
-
 RUN pip install wheel \
     && pip install -r requirements.txt
 
@@ -25,6 +20,7 @@ FROM base as runtime
 
 RUN apt-get update && apt-get install -y \
     curl \
+    gcc \
     && curl -fsSL https://deb.nodesource.com/setup_19.x | bash - \
     && apt-get update && apt-get install -y \
     nodejs \
@@ -39,8 +35,8 @@ FROM runtime as init
 WORKDIR /app
 ENV BUN_INSTALL="/app/.bun"
 COPY --from=build /app/ /app/
-RUN pc init
-
+#RUN pc init
+CMD ["pc","init"]
 
 FROM runtime
 

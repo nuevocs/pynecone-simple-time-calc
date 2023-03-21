@@ -9,6 +9,6 @@ config = pc.Config(
     api_url=api_url,
     bun_path="/app/.bun/bin/bun",
     db_url="sqlite:///pynecone.db",
-    telemetry_enabled=False,
+    # telemetry_enabled=False,
     # env=pc.Env.DEV,
 )

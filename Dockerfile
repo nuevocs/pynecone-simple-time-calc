@@ -35,7 +35,7 @@ WORKDIR /app
 ENV BUN_INSTALL="/app/.bun"
 COPY --from=build /app/ /app/
 RUN pc init
-#CMD ["pc","init"]
+
 
 FROM runtime
 
@@ -43,7 +43,6 @@ COPY --chown=pynecone --from=init /app/ /app/
 USER pynecone
 WORKDIR /app
 
-#CMD ["pc","run" , "--env", "dev"]
 CMD ["pc","run" , "--env", "prod"]
 
 EXPOSE 3000

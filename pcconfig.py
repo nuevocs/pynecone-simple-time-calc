@@ -2,8 +2,7 @@ import os
 import pynecone as pc
 
 api_url = os.getenv('API_URL')
-api_url = api_url.strip().lower()
-api_url = str(api_url)
+api_url.strip().lower()
 api_url = f'"{api_url}"'
 
 config = pc.Config(

@@ -20,7 +20,6 @@ FROM base as runtime
 
 RUN apt-get update && apt-get install -y \
     curl \
-    gcc \
     && curl -fsSL https://deb.nodesource.com/setup_19.x | bash - \
     && apt-get update && apt-get install -y \
     nodejs \

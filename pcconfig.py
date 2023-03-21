@@ -1,7 +1,7 @@
 import os
 import pynecone as pc
 
-api_url = os.getenv("ACCESS_API_URL")
+api_url = os.environ.get("ACCESS_API_URL")
 
 config = pc.Config(
     app_name="pynecone_simple_time_calc",

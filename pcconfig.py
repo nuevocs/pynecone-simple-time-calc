@@ -1,4 +1,4 @@
-import os
+# import os
 import pynecone as pc
 
 # api_url = os.getenv('TEST_VAR')

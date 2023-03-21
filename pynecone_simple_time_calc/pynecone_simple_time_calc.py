@@ -1,4 +1,4 @@
-from ..pcconfig import config
+from pcconfig import config
 
 import pynecone as pc
 from datetime import datetime, date, timedelta

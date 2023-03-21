@@ -1,5 +1,4 @@
-"""Welcome to Pynecone! This file outlines the steps to create a basic app."""
-from pcconfig import config
+from ..pcconfig import config
 
 import pynecone as pc
 from datetime import datetime, date, timedelta

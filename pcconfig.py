@@ -3,8 +3,8 @@ import pynecone as pc
 
 api_url = os.getenv('API_URL')
 api_url = api_url.strip().lower()
-api_url = f'"{api_url}"'
 api_url = str(api_url)
+api_url = f'"{api_url}"'
 
 config = pc.Config(
     app_name="pynecone_simple_time_calc",

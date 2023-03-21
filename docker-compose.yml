@@ -1,12 +1,12 @@
 version: '2'
 services:
   pynecone:
-    container_name: pycone-working-time-calculator
+    container_name: pynecone-working-time-calculator
     build:
       context: .
       dockerfile: Dockerfile
     restart: always
-#    env_file: stack.env
+    env_file: stack.env
     ports:
       - "${PORTS_API}:8000"
       - "${PORTS_PUBLIC}:3000"

@@ -1,7 +1,7 @@
 import os
 import pynecone as pc
 
-mode = os.environ.get('MODE')
+mode = os.environ.get('PC_APP_MODE')
 
 if mode == "PROD":
     fast_api_url = os.environ.get('FASTAPI_URL')

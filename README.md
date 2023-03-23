@@ -1,5 +1,7 @@
 # Pynecone Sample Project: Simple Working Time Calculator
 
+[Demo](https://app-pc-time.nuevocs.net/)
+
 Some companies allow their employees to leave to take care some stuffs for certain amount of time. ie. to see a doctor, to visit a city council etc
 This simple app allows you to calculate the exact time to finish your business excluding the time you are not on duty.
 

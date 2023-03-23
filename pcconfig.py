@@ -28,7 +28,14 @@ elif mode == "DEV":
     )
 
 else:
-    pass
+    config = pc.Config(
+        app_name="pynecone_simple_time_calc",
+        api_url=f"http://{local_ip}:{fast_api_port}",
+        bun_path="/app/.bun/bin/bun",
+        db_url="sqlite:///pynecone.db",
+        # telemetry_enabled=False,
+        # env=pc.Env.DEV,
+    )
 
 
 # config = pc.Config(

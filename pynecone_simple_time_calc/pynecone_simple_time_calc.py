@@ -93,15 +93,15 @@ def index() -> pc.Component:
                     pc.hstack(
                         pc.box(
                             pc.input(on_change=State.set_start_time, placeholder="10:00", bg="white"),
-                            width="50%",
+                            width="30%",
                         ),
                         pc.box(
                             pc.number_input(on_change=State.set_working_hour, default_value=7, bg="white"),
-                            width="20%",
+                            width="30%",
                         ),
                         pc.box(
                             pc.number_input(on_change=State.set_working_minute, default_value=30, bg="white"),
-                            width="20%",
+                            width="30%",
                         ),
                         pc.box(
                             pc.text("+1h lunch break", font_size="0.2em"),

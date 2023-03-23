@@ -1,12 +1,12 @@
 import os
 import pynecone as pc
 
-mode = os.environ.get('PC_APP_MODE')
+pc_mode = os.environ.get('PC_APP_MODE')
 local_ip = os.environ.get('FASTAPI_URL_LOCAL_IP')
 fast_api_url = os.environ.get('FASTAPI_URL')
 fast_api_port = os.environ.get('PORTS_API')
 
-if mode == "PROD":
+if pc_mode == "PC_PROD":
     config = pc.Config(
         app_name="pynecone_simple_time_calc",
         # api_url=f"https://{fast_api_url}",
@@ -17,7 +17,7 @@ if mode == "PROD":
         # env=pc.Env.DEV,
     )
 
-elif mode == "DEV":
+elif pc_mode == "PC_DEV":
     config = pc.Config(
         app_name="pynecone_simple_time_calc",
         api_url=f"http://{local_ip}:{fast_api_port}",

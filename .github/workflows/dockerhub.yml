@@ -23,4 +23,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/hello:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/github-public:latest
